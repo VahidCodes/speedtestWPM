@@ -1,0 +1,324 @@
+/* Common Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #282828;
+    color: #ffffff;
+}
+
+.container {
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    background: #333;
+    transition: background 0.3s;
+}
+
+h1 {
+    color: #f00;
+    margin-bottom: 20px;
+}
+
+.text-display {
+    font-size: 36px; /* Increase font size for better visibility */
+    padding: 20px;
+    border: 2px solid #f00;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    background: #444;
+    color: #fff;
+    display: inline-block;
+    min-width: 200px;
+}
+
+input[type="text"] {
+    font-size: 18px;
+    padding: 10px;
+    border: 2px solid #f00;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+.error-notification {
+    color: #f00;
+    margin-bottom: 20px;
+}
+
+.stats {
+    margin-bottom: 20px;
+}
+
+.timer, .wpm {
+    font-size: 24px;
+    margin: 10px;
+}
+
+.progress-bar {
+    width: 100%;
+    background: #444;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.progress {
+    height: 100%;
+    background: #f00;
+    width: 100%;
+    transition: width 1s linear;
+}
+
+.start-button {
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    background: #f00;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.start-button:hover {
+    background: #d00;
+}
+
+.wpm-message {
+    font-size: 18px;
+    color: #f00;
+}
+
+/* Light Mode Styles */
+body.light-mode {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.container.light-mode {
+    background: #fff;
+}
+
+.text-display.light-mode {
+    border: 2px solid #333;
+    background: #fff;
+    color: #333;
+}
+
+input[type="text"].light-mode {
+    border: 2px solid #333;
+}
+
+.error-notification.light-mode {
+    color: #d00;
+}
+
+/* From Uiverse.io by rishichawda */ 
+/* The switch - the box around the slider */
+#theme-toggle-button {
+    font-size: 10px;
+    position: relative;
+    display: inline-block;
+    width: 6em;
+    cursor: pointer;
+    margin-top: -74px;
+  }
+  
+  /* Hide default HTML checkbox */
+  #toggle {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  #container,
+  #patches,
+  #stars,
+  #button,
+  #sun,
+  #moon,
+  #cloud {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.25s;
+  }
+  
+  /* night sky background */
+  #toggle:checked + svg #container {
+    fill: #2b4360;
+  }
+  
+  /* move button to right when checked */
+  #toggle:checked + svg #button {
+    transform: translate(28px, 2.333px);
+  }
+  
+  /* show/hide sun and moon based on checkbox state */
+  #sun {
+    opacity: 1;
+  }
+  
+  #toggle:checked + svg #sun {
+    opacity: 0;
+  }
+  
+  #moon {
+    opacity: 0;
+  }
+  
+  #toggle:checked + svg #moon {
+    opacity: 1;
+  }
+  
+  /* show or hide background items on checkbox state */
+  #cloud {
+    opacity: 1;
+  }
+  
+  #toggle:checked + svg #cloud {
+    opacity: 0;
+  }
+  
+  #stars {
+    opacity: 0;
+  }
+  
+  #toggle:checked + svg #stars {
+    opacity: 1;
+  }
+  
+
+.start-button.light-mode {
+    background: #333;
+    color: #fff;
+}
+
+.start-button.light-mode:hover {
+    background: #222;
+}
+
+/* Theme Switcher Styles */
+.theme-switcher {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-right: 10px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #f00;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.theme-label {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Previous Results Styles */
+.previous-results {
+    margin-top: 20px;
+}
+
+.previous-results h2 {
+    color: #f00;
+    margin-bottom: 10px;
+}
+
+#results-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#results-list li {
+    background: #444;
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+/* Timer Styles */
+.timer-container {
+    margin: 20px 0;
+}
+
+.timer {
+    font-size: 36px; /* Increase font size for better visibility */
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+
+/* Remove button styles */
+.remove-button {
+    background: #f00;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.remove-button:hover {
+    background: #d00;
+}
